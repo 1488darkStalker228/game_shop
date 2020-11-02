@@ -22,12 +22,32 @@ const connection = mysql.createConnection({
 
 //Main;
 app.get('/', (req, res) => {
+  // connection.query('SELECT * FROM games_table', (err, result) => {
+  //   if (err) throw err;
+  //   // console.log(result);
+  //   const obj = {};
+  //
+  //   for (let i = 0; i < result.length; i++) {
+  //     obj[result[i]['id']] = result[i];
+  //   }
+  //
+  //   console.log(JSON.parse(JSON.stringify(obj)));
+  // });
   res.render('main');
 });
 
-//Все игры;
+//Все игры. У алекса лущенко нет такой страницы;
 app.get('/games', (req, res) => {
-  connection.query('SELECT * FROM games_table WHERE id <= 10', (err, result) => {
+  // //Возможно, тут нужна перепаковка;
+  // connection.query('SELECT * FROM games_table WHERE id <= 10', (err, result) => {
+  //   if (err) throw err;
+  //   // console.log(JSON.parse(JSON.stringify(result)));
+  //   res.render('games', {
+  //     games: JSON.parse(JSON.stringify(result))
+  //   });
+  // });
+
+  connection.query(`SELECT * FROM games_table WHERE id = ${req.query.id}`, (err, result) => {
     if (err) throw err;
     res.render('games', {
       games: JSON.parse(JSON.stringify(result))
@@ -56,6 +76,7 @@ app.get('/genres', (req, res) => {
 
   Promise.all([genres, games])
     .then(value => {
+      console.log(value[1]);
       res.render('genres', {
         genres: JSON.parse(JSON.stringify(value[0])),
         games: JSON.parse(JSON.stringify(value[1]))

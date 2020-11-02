@@ -32,6 +32,12 @@ img {
     overflow: hidden;
   }
 }
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .container {
   max-width: 1180px;
   margin: 0 auto;
@@ -216,6 +222,11 @@ img {
 .content {
   padding: 100px 0 0 0;
 }
+@media (max-width: 767px) {
+  .content {
+    padding: 70px 0 0 0;
+  }
+}
 
 .catalog-item {
   display: flex;
@@ -319,6 +330,56 @@ img {
     align-items: center;
     background-color: #f2f2f2;
   }
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  height: 200px;
+  border: 1px solid black;
+}
+.product__info {
+  font-family: Play, Arial, sans-serif;
+  font-size: 14px;
+  width: 370px;
+}
+.product__advantages {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #cbcbcb;
+  padding: 27px 25px;
+}
+.product__advantages-item {
+  position: relative;
+  padding-left: 40px;
+  line-height: 19px;
+  padding-top: 6px;
+}
+.product__advantages-item + .product__advantages-item {
+  margin-top: 11px;
+}
+.product__advantages-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 26px;
+  height: 26px;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+.product__advantages-item--delivery::before {
+  background-image: url(../images/2.svg);
+}
+.product__advantages-item--license::before {
+  background-image: url(../images/3.svg);
+}
+.product__advantages-item--discount::before {
+  background-image: url(../images/4.svg);
+}
+
+footer {
+  margin-top: auto;
+  padding-top: 20px;
 }
 
 .footer {

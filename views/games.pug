@@ -1,17 +1,48 @@
 include head
 
-main
-    div.wrapper
+div.page
+    main
         include header
         div.content
             div.container
-                div.catalog
-                    each game in games
-                        a(href='#').catalog-item
-                            div.catalog-item__image
-                                img(src = game['img'])
-                            div.catalog-item__name #{game['title']}
-                                div.catalog-item__genres #{game['genre']}
-                            div.catalog-item__price
-                                span #{game['price']} ₽
-include footer
+                h1 #{games[0]['title']}
+
+                div.product
+                    div.product__img
+                        img(src= games[0]['img'])
+                    div.product__info
+                        div.product__advantages
+                            ul.product__advantages-list
+                                li.product__advantages-item.product__advantages-item--delivery Моментальная доставка
+                                li.product__advantages-item.product__advantages-item--license Лицензионный ключ активации в STEAM
+                                li.product__advantages-item.product__advantages-item--license Регион: Россия
+                                li.product__advantages-item.product__advantages-item--discount Накопительная скидка до 10%
+
+
+    include footer
+
+
+
+
+
+
+
+
+
+//include head
+//
+//div.page
+//    main
+//        include header
+//        div.content
+//            div.container
+//                div.catalog
+//                    each game in games
+//                        a(href='#').catalog-item
+//                            div.catalog-item__image
+//                                img(src = game['img'])
+//                            div.catalog-item__name #{game['title']}
+//                                div.catalog-item__genres #{game['genre']}
+//                            div.catalog-item__price
+//                                span #{game['price']} ₽
+//    include footer

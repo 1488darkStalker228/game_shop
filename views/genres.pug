@@ -1,17 +1,17 @@
 include head
-main
-    div.wrapper
+div.page
+    main
         include header
         div.content
             div.container
                 h1 #{genres[0]['title']}
                 div.catalog
                     each game in games
-                        a(href='#').catalog-item
+                        a(href='games?id=' + game['id']).catalog-item
                             div.catalog-item__image
                                 img(src = game['img'])
                             div.catalog-item__name #{game['title']}
                                 div.catalog-item__genres #{genres[0]['title']}
                             div.catalog-item__price
                                 span #{game['price']} ₽
-include footer
+    include footer
