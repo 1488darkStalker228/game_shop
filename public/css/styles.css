@@ -63,7 +63,6 @@ img {
   border-bottom: 1px solid black;
 }
 .header__body {
-  position: relative;
   display: flex;
   justify-content: space-between;
   height: 80px;
@@ -102,9 +101,7 @@ img {
   position: absolute;
   top: 100%;
   left: 0;
-  z-index: 1;
   content: "";
-  display: block;
   width: 100%;
   height: 2px;
   background-color: #e1e2e3;
@@ -333,18 +330,32 @@ img {
 }
 
 .product {
+  padding: 10px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  height: 200px;
+  max-width: 370px;
+  margin: 0 auto;
   border: 1px solid black;
 }
+.product__title {
+  display: flex;
+  width: 100%;
+}
+.product__price {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+}
 .product__info {
-  font-family: Play, Arial, sans-serif;
   font-size: 14px;
-  width: 370px;
+  width: 100%;
 }
 .product__advantages {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   color: #cbcbcb;
   padding: 27px 25px;
 }
@@ -353,6 +364,9 @@ img {
   padding-left: 40px;
   line-height: 19px;
   padding-top: 6px;
+}
+.product__advantages-list {
+  white-space: nowrap;
 }
 .product__advantages-item + .product__advantages-item {
   margin-top: 11px;
@@ -375,6 +389,22 @@ img {
 }
 .product__advantages-item--discount::before {
   background-image: url(../images/4.svg);
+}
+.product__buy-button {
+  height: 75px;
+  width: 100%;
+  padding: 26px 40px;
+  background-color: #0094e9;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .product__advantages-list {
+    white-space: normal;
+  }
 }
 
 footer {
