@@ -20,7 +20,7 @@ const connection = mysql.createConnection({
   database : 'games'
 });
 
-//Main;
+//Main, пока не реализована;
 app.get('/', (req, res) => {
   // connection.query('SELECT * FROM games_table', (err, result) => {
   //   if (err) throw err;
@@ -76,7 +76,6 @@ app.get('/genres', (req, res) => {
 
   Promise.all([genres, games])
     .then(value => {
-      console.log(value[1]);
       res.render('genres', {
         genres: JSON.parse(JSON.stringify(value[0])),
         games: JSON.parse(JSON.stringify(value[1]))
@@ -91,3 +90,6 @@ app.post('/get-genres-list', (req, res) => {
     res.json(result);
   });
 });
+
+
+

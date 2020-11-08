@@ -3,22 +3,59 @@ include head
 div.page
     include header
     main
-        div.content
-            div.container
-                h1 #{games[0]['title']}
-                div.product
-                    div.product__title
-                        div.product__img
-                            img(src= games[0]['img'])
-                        div.product__price #{games[0]['price']} ₽
-                    div.product__info
-                        div.product__advantages
-                            ul.product__advantages-list
-                                li.product__advantages-item.product__advantages-item--delivery Моментальная доставка
-                                li.product__advantages-item.product__advantages-item--license Лицензионный ключ активации в STEAM
-                                li.product__advantages-item.product__advantages-item--license Регион: Россия
-                                li.product__advantages-item.product__advantages-item--discount Накопительная скидка до 10%
-                    a(data-id = games[0]['id'] href = 'games?id='+ games[0]['id']).product__buy-button В корзину
+        div.container
+            h1.content-title #{games[0]['title']}
+            div.content-wrap
+                div.content-left
+                    div.card
+                        div.card__header
+                            div.card__img
+                                img(src= games[0]['img'])
+                            div.card__price #{games[0]['price']} ₽
+                        div.card__info
+                            div.card__advantages
+                                ul.card__advantages-list
+                                    li.card__advantages-item.card__advantages-item--delivery Моментальная доставка
+                                    li.card__advantages-item.card__advantages-item--license Лицензионный ключ активации в STEAM
+                                    li.card__advantages-item.card__advantages-item--license Регион: Россия
+                                    li.card__advantages-item.card__advantages-item--discount Накопительная скидка до 10%
+                        a(data-id = games[0]['id'] href = 'games?id='+ games[0]['id']).card__buy-button #[span В корзину]
+                    div.card__panel
+                        ul.card__panel-list
+                            li.card__panel-item
+                                span.card__panel-key Жанр
+                                span.card__panel-value Экшэны
+                            li.card__panel-item
+                                span.card__panel-key Язык
+                                span.card__panel-value Lorem ipsum
+                            li.card__panel-item
+                                span.card__panel-key Дата выхода
+                                span.card__panel-value Lorem ipsum
+                            li.card__panel-item
+                                span.card__panel-key Издатель
+                                span.card__panel-value Lorem ipsum
+                            li.card__panel-item
+                                span.card__panel-key Разработчик
+                                span.card__panel-value Lorem ipsum
+                            li.card__panel-item
+                                span.card__panel-key Особенности
+                                span.card__panel-value Lorem ipsum
+                            li.card__panel-item
+                                span.card__panel-key Регион
+                                span.card__panel-value Россия
+                div.content-right
+                    div.description
+                        h2.description__title Описание
+                        div.description__content
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            h2.description__title Особенности игры:
+                            ul
+                                li #[span Lorem ipsum dolor sit amet.] Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                li #[span Lorem ipsum dolor sit amet.] Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                li #[span Lorem ipsum dolor sit amet.] Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                li #[span Lorem ipsum dolor sit amet.] Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                li #[span Lorem ipsum dolor sit amet.] Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
     include footer
 
 
@@ -32,58 +69,3 @@ div.page
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-//Новый откат, пусть будет;
-//include head
-//
-//div.page
-//    include header
-//    main
-//        div.content
-//            div.container
-//                h1 #{games[0]['title']}
-//
-//                div.product
-//                    div.product__img
-//                        img(src= games[0]['img'])
-//                    div.product__info
-//                        div.product__advantages
-//                            ul.product__advantages-list
-//                                li.product__advantages-item.product__advantages-item--delivery Моментальная доставка
-//                                li.product__advantages-item.product__advantages-item--license Лицензионный ключ активации в STEAM
-//                                li.product__advantages-item.product__advantages-item--license Регион: Россия
-//                                li.product__advantages-item.product__advantages-item--discount Накопительная скидка до 10%
-//                    div.product__buy-block
-//                        a(data-id = games[0]['id'] href = 'games?id='+ games[0]['id']).product__buy-button В корзину
-//
-//    include footer
-//**********************************************************************************************************************
-//Старый откат, скорее всего, не нужон;
-//include head
-//
-//div.page
-//    main
-//        include header
-//        div.content
-//            div.container
-//                div.catalog
-//                    each game in games
-//                        a(href='#').catalog-item
-//                            div.catalog-item__image
-//                                img(src = game['img'])
-//                            div.catalog-item__name #{game['title']}
-//                                div.catalog-item__genres #{game['genre']}
-//                            div.catalog-item__price
-//                                span #{game['price']} ₽
-//    include footer
