@@ -1,65 +1,53 @@
 
-<html>
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <link rel="stylesheet" href="css/styles.css"/>
-    <title>Game Shop</title>
-  </head>
-  <body></body>
-</html>
-<div class="page">
-  <main>
-    <header>
-      <div class="header">
-        <div class="container">
-          <div class="header__body"><a class="header__logo" href="/"><img src="/images/logo.svg" width="195" height="42"/><img src="/images/logo-min.svg" width="53" height="28"/></a>
-            <div class="header__burger"><span></span></div>
-            <nav class="header__menu">
-              <ul class="header__list">
-                <li><a class="header__link" href="/">Главная</a></li>
-                <li><a class="header__link" href="/games">Все игры</a></li>
-                <li><a class="header__link" href="">Жанры</a></li>
-                <li><a class="header__link" href="">Корзина</a></li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </header>
-    <div class="content">
-      <div class="container">
-        <h1> </h1>
-      </div>
-    </div>
-  </main>
-  <footer>
-    <div class="footer">
-      <div class="container">
-        <div class="footer__inner">
-          <div class="footer__left">© 2012–2020 STEAMPAY
-            <div class="footer__copyright">
-              <noindex>Все права защищены. Полное или частичное копирование материалов сайта без согласования с администрацией запрещено!<br/> Все названия игр, компаний, торговых марок, логотипы и игровые материалы являются собственностью соответствующих владельцев.</noindex>
-            </div>
-          </div>
-          <div class="footer__right">
-            <nav>
-              <ul class="footer__nav-list">
-                <li class="footer__nav-item"><a class="footer__nav-link" href="#">Соглашение</a></li>
-                <li class="footer__nav-item"><a class="footer__nav-link" href="#">Партнёрам</a></li>
-                <li class="footer__nav-item"><a class="footer__nav-link" href="#">Поддержка</a></li>
-                <li class="footer__nav-item"><a class="footer__nav-link" href="#">О сайте</a></li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <script src="/js/genres.js"></script>
-  <script src="/js/burger-menu.js"></script>
-</div>
+<!--include head-->
+<!---->
+<!--div.page-->
+<!--    include header-->
+<!--    main-->
+<!--        div.content-->
+<!--            div.container-->
+<!--                h1 #{games[0]['title']}-->
+<!---->
+<!--                div.product-->
+<!--                    div.product__img-->
+<!--                        img(src= games[0]['img'])-->
+<!--                    div.product__info-->
+<!--                        div.product__advantages-->
+<!--                            ul.product__advantages-list-->
+<!--                                li.product__advantages-item.product__advantages-item--delivery Моментальная доставка-->
+<!--                                li.product__advantages-item.product__advantages-item--license Лицензионный ключ активации в STEAM-->
+<!--                                li.product__advantages-item.product__advantages-item--license Регион: Россия-->
+<!--                                li.product__advantages-item.product__advantages-item--discount Накопительная скидка до 10%-->
+<!--                    div.product__buy-block-->
+<!--                        a(data-id = games[0]['id'] href = 'games?id='+ games[0]['id']).product__buy-button В корзину-->
+<!---->
+<!--    include footer-->
+<!--Новый откат, пусть будет;-->
+<!--include head-->
+<!---->
+<!--div.page-->
+<!--    include header-->
+<!--    main-->
+<!--        div.content-->
+<!--            div.container-->
+<!--                h1 #{games[0]['title']}-->
+<!---->
+<!--                div.product-->
+<!--                    div.product__img-->
+<!--                        img(src= games[0]['img'])-->
+<!--                    div.product__info-->
+<!--                        div.product__advantages-->
+<!--                            ul.product__advantages-list-->
+<!--                                li.product__advantages-item.product__advantages-item--delivery Моментальная доставка-->
+<!--                                li.product__advantages-item.product__advantages-item--license Лицензионный ключ активации в STEAM-->
+<!--                                li.product__advantages-item.product__advantages-item--license Регион: Россия-->
+<!--                                li.product__advantages-item.product__advantages-item--discount Накопительная скидка до 10%-->
+<!--                    div.product__buy-block-->
+<!--                        a(data-id = games[0]['id'] href = 'games?id='+ games[0]['id']).product__buy-button В корзину-->
+<!---->
+<!--    include footer-->
+<!--**********************************************************************************************************************-->
+<!--Старый откат, скорее всего, не нужон;-->
 <!--include head-->
 <!---->
 <!--div.page-->

@@ -1,12 +1,4 @@
-//Общие стили {
-*, *::before, *::after {
-  padding: 0;
-  margin: 0;
-  border: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  list-style-type: none;
-}
+@import "null";
 
 html, body {
   background-color: #f3f3f3;
@@ -16,7 +8,6 @@ html, body {
   line-height: 1.4;
   font-weight: 400;
 }
-
 a {
   transition: color .3s ease;
 }
@@ -24,211 +15,24 @@ a:hover {
   color: #ff793a;
 }
 
-img {
-  vertical-align: middle;
-}
-
 @media (max-width: 767px) {
   body.lock {
     overflow: hidden;
   }
 }
-
 .page {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-
 .container {
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 10px;
 }
-
-@import "header";
-
-//Контентная часть сайта {
-.content {
-  padding: 100px 0 0 0;
-  @media (max-width: 767px) {
-    & {
-      padding: 70px 0 0 0;
-    }
-  }
-}
-
-.catalog-item {
-  display: flex;
-  align-items: center;
-  padding: 19px 22px;
-  margin-bottom: 2px;
-  background-color: #ffffff;
-  transition: box-shadow .3s ease, background-color .3s ease;
-  //НЕП;
-  &:hover {
-    box-shadow: 0 0 15px rgba(0,0,0,.15);
-    z-index: 2;
-  }
-  &:hover &__name {
-    color: #ff793a;
-  }
-  &__image {
-    width: 152px;
-    min-width: 152px;
-  }
-  &__image img {
-    max-width: 100%;
-  }
-  //НЕП;
-  &__name {
-    padding-left: 27px;
-    padding-right: 15px;
-    vertical-align: middle;
-    color: #0a0a0a;
-    -webkit-transition: all .3s ease;
-    transition: all .3s ease;
-    font-size: 16px;
-    font-weight: 400;
-    overflow: hidden;
-    white-space: normal;
-    max-width: 430px;
-    text-overflow: ellipsis;
-  }
-  &__genres {
-    color: #969696;
-    font-size: 14px;
-    margin-top: 5px;
-  }
-  //НЕП;
-  &__price {
-    flex: 1 auto;
-    justify-content: flex-end;
-    font-family: Play,Arial,sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    color: #000;
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-    white-space: nowrap;
-  }
-
-  @media (max-width: 767px) {
-    &__image {
-      width: 100px;
-      min-width: 100px;
-    }
-    &__name {
-      font-size: 14px;
-      padding: 0 15px;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      -webkit-line-clamp: 2;
-      -ms-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      -ms-flex-orient: vertical;
-      line-height: 1.5;
-      white-space: normal;
-      max-height: 38px;
-    }
-    &__genres {
-      display: none;
-    }
-    &__price {
-      flex-direction: column;
-      font-size: 16px;
-      align-items: flex-end;
-      line-height: 1.3;
-    }
-  }
-
-  @media (max-width: 600px) {
-    & {
-      padding: 10px 15px;
-    }
-    &:hover {
-      box-shadow: none;
-    }
-    &__image {
-      min-width: 80px;
-      width: 80px;
-    }
-    &__name {
-      font-size: 13px;
-    }
-    &__price {
-      font-size: 14px;
-      padding: 4px 5px;
-      flex: 0 auto;
-      margin-left: auto;
-      min-width: 68px;
-      align-items: center;
-      background-color: #f2f2f2;
-    }
-  }
-}
 //}
 
-//Отдельная страница товара
-.product {
-  display: flex;
-  align-items: center;
-  height: 200px;
-  border: 1px solid black;
-  &__info {
-    font-family: Play,Arial,sans-serif;
-    font-size: 14px;
-    width: 370px;
-  }
-  &__advantages {
-    background-color: rgba(0,0,0,.5);
-    color: #cbcbcb;
-    padding: 27px 25px;
-  }
-  &__advantages-item {
-    position: relative;
-    padding-left: 40px;
-    line-height: 19px;
-    padding-top: 6px;
-  }
-  &__advantages-item + &__advantages-item {
-    margin-top: 11px;
-  }
-  &__advantages-item::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 26px;
-    height: 26px;
-    background-position: 50%;
-    background-repeat: no-repeat;
-  }
-  &__advantages-item--delivery::before {
-    background-image: url(../images/2.svg);
-  }
-  &__advantages-item--license::before {
-    background-image: url(../images/3.svg);
-  }
-  &__advantages-item--discount::before {
-    background-image: url(../images/4.svg);
-  }
-}
-
+@import "header";
+@import "genres-page";
+@import "game-page";
 @import "footer";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
