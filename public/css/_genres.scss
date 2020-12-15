@@ -2,23 +2,35 @@
   margin: 35px 0 35px 0;
   font-weight: 700;
   font-size: 30px;
+  font-family: Play,Arial,sans-serif;
   padding-left: 0;
-}
+  @media (max-width: 991px) {
+    & {
+      margin: 25px 0 25px 0;
+      text-align: center;
+    }
+  }
 
-@media (max-width: 991px) {
-  .genres-title {
-    margin: 25px 0 25px 0;
-    text-align: center;
+  @media (max-width: 767px) {
+    & {
+      font-size: 25px;
+    }
   }
 }
 
-@media (max-width: 767px) {
-  .genres-title {
-    font-size: 25px;
+.catalog {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 767px) {
+    & {
+      min-height: 37vh;
+    }
   }
 }
 
 .catalog-item {
+  position: relative;
   display: flex;
   align-items: center;
   padding: 19px 22px;
@@ -116,3 +128,79 @@
     }
   }
 }
+
+.pagination {
+  margin-top: auto;
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px 0 0 0;
+  }
+  &__left, &__right {
+    position: absolute;
+    display: block;
+    width: 45px;
+    height: 45px;
+  }
+  &__left {
+    left: 0;
+    background: url("../images/left-arrow.svg") no-repeat;
+  }
+  &__right {
+    right: 0;
+    background: url("../images/right-arrow.svg") no-repeat;
+  }
+  &__list {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #d5dddf;
+    border-radius: 3px;
+  }
+  &__item {
+    display: block;
+    height: 100%;
+    background-color: #ffffff;
+  }
+  &__item:hover {
+    background-color: #edf5f9;
+  }
+  &__link {
+    display: flex;
+    padding: 0 16px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    font-size: 14px;
+    color: #6c797f;
+  }
+  &__link.active {
+    border-color: #77a8d0;
+    color: #4d80aa;
+    cursor: pointer;
+  }
+  &__link:hover {
+    color: #4d80aa;
+  }
+
+  @media (max-width: 767px) {
+    &__left, &__right {
+      width: 20px;
+      height: 20px;
+    }
+    &__left {
+      left: -6px;
+    }
+    &__right {
+      right: -6px;
+    }
+    &__link {
+      padding: 0 6px;
+      height: 30px;
+    }
+  }
+}
+

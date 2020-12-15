@@ -1,0 +1,17 @@
+div.pagination
+    div.pagination__wrap
+        if dec === 0
+            span.pagination__left
+        else
+            a(href= '' + dec).pagination__left
+        ul.pagination__list
+            - for (let i = currPage - amountToShow; i <= currPage + limit; i++)
+                li.pagination__item
+                    if i === currPage
+                        span.pagination__link.active #{i}
+                    else
+                        a.pagination__link(href='/' + genre + '/' + i) #{i}
+        if inc === length + 1
+            span.pagination__right
+        else
+            a.pagination__right(href= '' + inc)

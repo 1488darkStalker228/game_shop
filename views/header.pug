@@ -1,33 +1,38 @@
-header
-    div.header
-        div.container
-            div.header__body
-                a(class='header__logo' href='/')
-                    img(src='/images/logo.svg' width='195' height='42')
-                    img(src='/images/logo-min.svg' width='53' height='28')
-                div.header__burger
-                    span
-                nav.header__menu
-                    ul.header__list
-                        li
-                            a(class='header__link' href='/') Главная
-                        li
-                            a(class='header__link' href='/games') Все игры
-                        li
-                            a(class='header__link' href='') Жанры
-                        li
-                            a(href='/cart')
-                                img(src='/images/cart.svg' width='36' height='36')
-
-
-
-
-
-
-
-
-
-
-
-
+header.header
+    div.container
+        div.header__body
+            a(class='header__logo' href='/')
+                img(src='/images/logo.svg' width='195' height='42')
+                img(src='/images/logo-min.svg' width='53' height='28')
+            div.header__burger
+                span
+            nav.header__menu
+                ul.header__list
+                    li.header__item
+                        a(href='/').header__link Главная
+                    li.header__item
+                        a(href='/games/1').header__link Все игры
+                    li.header__item.genres
+                        button.header__genres-button Жанры
+                        ul.header__list-adaptive
+                    li.header__item.cart
+                        a.header__cart-button
+                            img(src='/images/cart.svg' width='36' height='36')
+                            span.header__badge
+                div.header__button-close
+            div.header__popup
+                div.header__popup-body
+                    div.header__popup-content-genres
+                        div.header__dropdown-genres
+                            nav
+                                ul.header__dropdown-list
+                    div.header__popup-content-cart
+                        div.header__dropdown-cart
+                            div.header__item-body
+                            //div.header__total
+                            //    span.header__text Итого:
+                            //    span.header__sum
+                            div.header__go-to-cart
+                                a(href='/order').header__go-to-cart-link
+                                    span Перейти в корзину
 

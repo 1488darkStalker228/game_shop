@@ -1,0 +1,72 @@
+include head
+
+div.page
+    include header
+    main.main.content
+        div.container
+            a.arrow-back.game(onclick="javascript:history.back(); return false;")
+            h1.content-title #{game[0]['game_title']}
+            div.content-wrap
+                div.content-left
+                    div.card
+                        div.card__header
+                            div.card__img
+                                img(src= game[0]['img'])
+                            div.card__price #{game[0]['price']} ₽
+                        div.card__info
+                            div.card__advantages
+                                ul.card__advantages-list
+                                    li.card__advantages-item.card__advantages-item--delivery Моментальная доставка
+                                    li.card__advantages-item.card__advantages-item--license Лицензионный ключ активации в STEAM
+                                    li.card__advantages-item.card__advantages-item--license Регион: Россия
+                                    li.card__advantages-item.card__advantages-item--discount Накопительная скидка до 10%
+                        a(data-id = game[0]['id']).card__buy-button #[span В корзину]
+                    div.card__panel
+                        ul.card__panel-list
+                            li.card__panel-item
+                                span.card__panel-key Жанр
+                                span.card__panel-value #{game[0]['genre_title']}
+                            li.card__panel-item
+                                span.card__panel-key Язык
+                                span.card__panel-value Lorem ipsum
+                            li.card__panel-item
+                                span.card__panel-key Дата выхода
+                                span.card__panel-value Lorem ipsum
+                            li.card__panel-item
+                                span.card__panel-key Издатель
+                                span.card__panel-value Lorem ipsum
+                            li.card__panel-item
+                                span.card__panel-key Разработчик
+                                span.card__panel-value Lorem ipsum
+                            li.card__panel-item
+                                span.card__panel-key Особенности
+                                span.card__panel-value Lorem ipsum
+                            li.card__panel-item
+                                span.card__panel-key Регион
+                                span.card__panel-value Россия
+                div.content-right
+                    div.description
+                        h2.description__title Описание
+                        div.description__content
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            h2.description__title Особенности игры:
+                            ul
+                                li #[span Lorem ipsum dolor sit amet.] Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                li #[span Lorem ipsum dolor sit amet.] Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                li #[span Lorem ipsum dolor sit amet.] Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                li #[span Lorem ipsum dolor sit amet.] Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                li #[span Lorem ipsum dolor sit amet.] Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    include footer
+
+
+
+
+
+
+
+
+
+
+
+

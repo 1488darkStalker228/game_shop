@@ -1,13 +1,12 @@
-footer {
-  margin-top: auto;
-  padding-top: 20px;
-}
 .footer {
-  color: hsla(0,0%,100%,.3);
-  background: #0d0e10;
-  padding: 50px 0 50px;
-  overflow: hidden;
-  flex-grow: 0;
+  margin-top: auto;
+  &__wrap {
+    color: hsla(0, 0%, 100%, .3);
+    background: #0d0e10;
+    padding: 50px 0 50px;
+    overflow: hidden;
+    flex-grow: 0;
+  }
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -25,7 +24,8 @@ footer {
     display: flex;
     font-size: 16px;
   }
-  &__nav-item+&__nav-item {
+
+  &__nav-item:not(:nth-child(1)) {
     margin-left: 60px;
   }
   &__nav-link {
@@ -40,7 +40,7 @@ footer {
     &__nav-item {
       font-size: 15px;
     }
-    &__nav-item+&__nav-item {
+    &__nav-item:not(:nth-child(1)) {
       margin-left: 25px;
     }
   }
@@ -73,8 +73,10 @@ footer {
       text-align: center;
       margin-top: 10px;
     }
-    &__nav-item+&__nav-item {
+    &__nav-item:not(:nth-child(1)) {
       margin-left: 0;
     }
   }
 }
+
+

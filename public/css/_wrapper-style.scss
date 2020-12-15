@@ -1,0 +1,41 @@
+$fontPlay: Play,Arial,sans-serif;
+$fontOpenSans: 'Open Sans',Arial,Helvetica,Verdana,sans-serif;
+
+$colorForHover: #ff793a;
+$colorForBorder: #e1e2e3;
+
+html, body {
+  background-color: #f3f3f3;
+  font-family: $fontOpenSans;
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+a {
+  transition: color .3s ease;
+}
+a:hover {
+  color: $colorForHover;
+}
+
+@media (max-width: 767px) {
+  body.lock {
+    overflow: hidden;
+  }
+}
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.container {
+  position: relative;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.main.content {
+  margin: 0 0 20px 0;
+}
+

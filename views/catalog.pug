@@ -1,0 +1,7 @@
+a.catalog-item(href='/game/' + game['game_title'])
+    div.catalog-item__image
+        img(src = game['img'])
+    div.catalog-item__name #{game['game_title']}
+        div.catalog-item__genres #{game['genre_title']}
+    div.catalog-item__price
+        span #{game['price']} ₽

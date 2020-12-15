@@ -1,0 +1,32 @@
+include head
+
+div.page
+    main.order
+        section.order__container
+            a.arrow-back.order(onclick="javascript:history.back(); return false;")
+            div.order__logo
+                a(href='/')
+                    img(src='/images/logo.svg' width='195' height='42')
+            h1.order__title Корзина
+            div.order__content
+                div.order__item-body
+                h2.order__title-form Оформление заказа
+                div.form
+                    form#game-shop-form(action='')
+                        div.form__control
+                            label.form__label(for='user-name') Имя
+                            input.form__input(type='text' id='user-name' placeholder='Введите ваше имя' required)
+                        div.form__control
+                            label.form__label(for='email') Email
+                            input.form__input(type='email' id='email' placeholder='Email' required)
+                        div.form__control.form-check
+                            input.form__checkbox(type='checkbox' id='checkbox' required)
+                            label(for='checkbox') Я ознакомлен с пользовательским соглашением.
+                        button.form__button-primary(type='submit') Оформить заказ
+    script(src="https://cdn.jsdelivr.net/npm/sweetalert2@10")
+    script(src='js/cart-handler.js')
+    script(src='js/order.js')
+
+
+
+

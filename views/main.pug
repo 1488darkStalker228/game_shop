@@ -2,7 +2,49 @@ include head
 
 div.page
     include header
-    main
-        div.container
-            h1 Main page
+    main.main
+        section.main-slider
+            div.main-slider__container
+                div.main-slider__wrapper
+                    div.main-slider__track
+                        div.main-slider__slide
+                            a(href='/game/Cyberpunk%202077')
+                                img(src='https://steampay.com/slider/cyberpank.png?1604608386')
+                        div.main-slider__slide
+                            img(src='https://steampay.com/slider/GhostRunner.jpg?1603287013')
+                        div.main-slider__slide
+                            a(href='/game/Mafia:%20Trilogy')
+                                img(src='https://steampay.com/slider/mafia_trylogy_2.png?1590765902')
+                        div.main-slider__slide
+                            img(src='https://steampay.com/slider/FM21.jpg?1606902227')
+                        div.main-slider__slide
+                            a(href='/game/Death%20Stranding')
+                                img(src='https://steampay.com/slider/DEATH_STRANDING_1.png?1593700816')
+                div.main-slider__dots-wrapper
+                    span.main-slider__dot.active
+                    span.main-slider__dot
+                    span.main-slider__dot
+                    span.main-slider__dot
+                    span.main-slider__dot
+                div.main-slider__btn-prev
+                div.main-slider__btn-next
+        section.main-text
+            div.container
+                div.main-text__content
+                    h1.main-text__title Что такое Game Shop?
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    div.main-text__more
+                        span.main-text__span Читать далее
+                        div.main-text__hidden
+                            h3.main-text__title Наши преимущества
+                            ul.main-text__list
+                                li Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                                li Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                li Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore  aliqua.
+                                li Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore aliqua.
+                                li Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                li Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna.
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
     include footer
+    script(src='/js/main.js')
