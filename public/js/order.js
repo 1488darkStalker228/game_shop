@@ -107,6 +107,3 @@ document.querySelector('#game-shop-form').addEventListener('submit', e => {
   email.value = '';
   checkBox.checked = false;
 });
-
-// konstantin88178@gmail.com
-
